@@ -1,0 +1,1131 @@
+
+/* ********** Document-wide Classes ********** */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+
+  /* Note: this color will only be used for text on white backgrounds. */
+  color: #505962;
+}
+
+/* html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+} */
+
+/* ********** General Classes (Used in multiple areas of the website) ********** */
+
+.logo {
+  width: 75px;
+  height: 100px;
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 2%;
+  z-index: 2000;
+}
+
+@media only screen and (max-width: 700px) {
+  .logo {
+    width: 30px;
+    height: 40px;
+  }
+}
+
+.hr-green {
+  background-color: #1ebba3;
+  border-width: 0.3rem;
+  height: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.hr-green-thick {
+  background-color: #1ebba3;
+  border-width: 0.6rem;
+  height: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.hr-red {
+  background-color: #ff4c4c;
+  border-width: 0.3rem;
+  height: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.hr-blue {
+  background-color: #0276FD;
+  border-width: 0.3rem;
+  height: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.hr-add-space {
+  margin-top: 5%;
+}
+
+/* Create the parallax scrolling effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Removes bootstrap underline when an anchor is applied */
+.no-underline {
+  text-decoration: none !important;
+}
+
+/* Makes an element take up the full screen */
+.fullscreen {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Applies serif fonts */
+.serif-font {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Applies Times New Roman font */
+.timeNewRoman-font {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+/* Quick Links --> used as the footer of the website */
+.quick-links-container {
+  text-align: center;
+  background-color: #0e1215;
+  word-spacing: 1rem;
+  padding: 3% 0;
+}
+
+.quick-links-container h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.2rem;
+  color: #E8E8E8;
+  word-spacing: normal;
+  padding-bottom: 2%;
+}
+
+.quick-link-icon {
+  padding-top: 0;
+  color: #1ebba3;
+  font-size: 1.5rem;
+}
+
+.quick-link-icon:hover {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.copyright-label {
+  padding-top: 10px;
+  font-size: 1rem;
+  word-spacing: 0;
+}
+
+@media only screen and (max-width: 520px) {
+  .quick-link-icon, .quick-link-icon:hover {
+    font-size: 1.2rem;
+  }
+
+  .copyright-label {
+    font-size: 0.9rem;
+  }
+}
+
+/* ********** index.html Classes ********** */
+
+/* Navbar */
+.navbar {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+/* Spacing between items in navbar */
+.navbar-nav li {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  z-index: 9999;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #1ebba3;
+  z-index: 9999;
+}
+
+/* Title. This text will lay on top of the image slideshow */
+.NW-text-box {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px #000000;
+  color: #F5F5F5;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  z-index: 1001;
+}
+
+.NW-text-box h1 {
+  font-size: 3.5rem;
+}
+
+.NW-text-box h2 {
+  font-size: 2rem;
+}
+
+/* Image Slideshow */
+.slideshow-container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 20px;
+  color: white;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 30px;
+  transition: 0.6s ease;
+  user-select: none;
+  z-index: 1002;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+.prev:focus, .next:focus {
+  outline: none;
+  border: none;
+}
+
+/* Caption text */
+.slide-caption {
+  color: #f2f2f2;
+  font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0.5;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+/* Intro Section */
+#intro {
+  background-image: url(../images/highlander.jpg);
+  text-align: left;
+}
+
+.intro-background-tint {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+}
+
+.intro-text-box {
+  border-radius: 0 0 25px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #F5F5F5;
+  padding: 2% 3%;
+  padding-left: 5%;
+  z-index: 1;
+}
+
+.intro-text-box h1 {
+  font-size: 3rem;
+}
+
+.intro-text-box p {
+  color: #E8E8E8;
+  margin-top: 1.5%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Media Queries for index.html */
+@media only screen and (max-width: 790px) {
+  .NW-text-box h1 {
+    font-size: 2.5rem;
+  }
+
+  .NW-text-box h2 {
+    2.0rem;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .NW-text-box {
+    top: 30%;
+  }
+
+  .intro-text-box {
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .intro-text-box h1 {
+    font-size: 2.3rem;
+  }
+
+  .intro-text-box p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ********** about.html Classes ********** */
+
+/* About us Header */
+
+.about-header {
+  background-image: url(../images/mountain-bc.jpg);
+  background-position: bottom;
+  height: 40vh;
+}
+
+.about-background-tint {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  height: 40vh;
+}
+
+.about-header-text-box {
+  color: #F5F5F5;
+  position: relative;
+  text-align: center;
+  top: 45%;
+}
+
+.about-header-title {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* About us Intro */
+.about-us-container {
+  background-image: url(../images/about-image-2.jpg);
+  width: 100%;
+  height: 120vh;
+}
+
+.about-us-tint-left {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 120vh;
+}
+
+.about-us-tint-right {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 120vh;
+}
+
+.about-us-text-box {
+  /* Vertically Center */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  text-align: left;
+  padding: 0 3rem;
+  color: #F5F5F5;
+}
+
+.about-us-text-box h1 {
+  font-size: 3rem;
+}
+
+.about-us-text-box p {
+  color: #B8B8B8;
+  margin-top: 1.5%;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* Meet the team */
+.meet-the-team {
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 7%;
+}
+
+/* Raphael's Profile */
+.raphael-profile-container {
+  margin-top: 2%;
+  padding: 5%;
+}
+
+.raphael-text-box h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3rem;
+  color: black;
+}
+
+.raphael-text-box p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-bottom: 3%;
+  margin: 0;
+}
+
+.raphael-img {
+  float: right;
+  width: 40%;
+  height: auto;
+  padding-left: 3%;
+}
+
+/* David's Profile */
+.david-profile-container {
+  margin-bottom: 20%;
+  margin-top: 2%;
+  padding: 5%;
+  padding-top: 0;
+  width: 100%;
+}
+
+.david-text-box h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3rem;
+  color: black;
+  margin-left: 35%;
+}
+
+.david-text-box p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-left: 30%;
+  padding-bottom: 3%;
+}
+
+.david-img {
+  width: 35%;
+  float: left;
+  padding-right: 3%;
+}
+
+/* Media Queries for about.html */
+@media only screen and (max-width: 1000px) {
+  /* Center all text */
+  .raphael-profile-container, .david-profile-container {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 5%;
+  }
+
+  .david-profile-container, .david-profile-container h1, .david-profile-container p {
+    margin: 0;
+    width: 100%;
+  }
+
+  .david-profile-container h1, .david-profile-container p {
+    padding-left: 0;
+  }
+
+  .raphael-img, .david-img {
+    float: none;
+    margin: 3% auto;
+    padding: 0;
+    display: block;
+    width: 50%;
+  }
+
+  .david-img {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .about-us-text-box p {
+    font-size: 3rem;
+  }
+
+  .about-us-text-box p {
+    font-size: 1.0rem;
+    line-height: 1.2;
+  }
+
+  .raphael-profile-container, .david-profile-container {
+    margin-top: 10%;
+  }
+}
+
+/* ********** contact.html Classes ********** */
+
+.contact-header {
+  background-image: url(../images/contact-background-3.jpg);
+  background-position: bottom center;
+  height: 40vh;
+}
+
+.contact-background-tint {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 40vh;
+}
+
+.contact-header-text-box {
+  color: #F5F5F5;
+  position: relative;
+  text-align: center;
+  top: 45%;
+}
+
+.contact-header-title {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.contact-text-box {
+  position: relative;
+  text-align: center;
+  padding: 5% 18%;
+  padding-bottom: 0;
+}
+
+.contact-text-box h1 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.contact-text-box p {
+  font-size: 1.3rem;
+  padding-bottom: 0;
+}
+
+.social-media-icon-container {
+  text-align: center;
+  word-spacing: 1rem;
+  padding: 1%;
+  padding-bottom: 2%;
+}
+
+.social-media-icon {
+  padding-top: 0;
+  color: black;
+}
+
+.social-media-icon:hover {
+  color: #1ebba3;
+  text-decoration: none;
+}
+
+.contact-form-container {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  text-align: left;
+  padding: 5% 25%;
+  padding-bottom: 3%;
+}
+
+.contact-form-container h1 {
+  color: black;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2rem 0;
+  padding: 20px 20px;
+}
+
+textarea.contact-form-text {
+  resize: none;
+  height: 200px;
+}
+
+.contact-form-btn {
+  border: 0;
+  border-radius: 27px;
+  background: #36454f;
+  color: #F5F5F5;
+  padding: 14px 50px;
+}
+
+.contact-form-btn:hover {
+  background-color: #5e7889;
+}
+
+/* Media Queriers for contact.html */
+@media only screen and (max-width: 700px) {
+  .contact-form-container {
+    padding: 5% 15%;
+  }
+}
+
+/* ********** equipment.html Classes ********** */
+
+.equipment-header {
+  background-image: url(../images/highlander.jpg);
+
+  background-size: cover;
+  height: 70vh;
+}
+
+.equipment-background-tint {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 70vh;
+}
+
+.equipment-header-text-box {
+  color: #F5F5F5;
+  position: relative;
+  text-align: center;
+  top: 45%;
+}
+
+.equipment-header-text-box h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.gear-container {
+  padding: 5%;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.gear-container h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: black;
+}
+
+.gear-container h2 {
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: black;
+}
+
+.gear-container p {
+  font-size: 1rem;
+}
+
+.gear-image {
+  margin-top: 25px;
+  max-width: 70%;
+  border-radius: 1px;
+
+  /* For the animation */
+   transition: transform .2s;
+}
+
+.gear-image:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queriers for equipment.html */
+@media only screen and (max-width: 767px) {
+  .gear-image {
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .equipment-header, .equipment-background-tint {
+    height: 40vh;
+  }
+}
+
+/* ********** adventures.html Classes ********** */
+.adventures-header {
+  background-image: url(../images/adventures-image.jpg);
+  object-fit: cover;
+  height: 50vh;
+}
+
+.adventures-background-tint {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-position: bottom;
+  width: 100%;
+  height: 50vh;
+}
+
+.adventures-header-text-box {
+  color: #F5F5F5;
+  position: relative;
+  text-align: center;
+  top: 45%;
+}
+
+.adventures-header-text-box h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.adventures-title {
+  margin-top: 5%;
+  margin-left: 12.5%;
+
+  color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.trip-container {
+  width: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.trip-container:hover {
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  transform: scale(1.015);
+}
+
+.trip-container-left {
+  margin-left: 25%;
+  margin-right: 5%;
+}
+
+.trip-container-right {
+  margin-left: 5%;
+  margin-right: 25%;
+}
+
+.trip-container img {
+  width: 100%;
+}
+
+.trip-container .text-box {
+  background-color: #F5F5F5;
+  color: black;
+}
+
+.trip-container .text-box h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 2.0rem;
+  margin-bottom: 0;
+  padding: 25px 10px 5px 10px;
+}
+
+.trip-container .text-box h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding: 0px 10px 25px 10px;
+}
+
+/* CSS for pages for each adventure */
+.centre-div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Back button to go to previous page */
+.back-btn {
+  border: none;
+  background-color: white;
+  position: absolute;
+  padding: 100px 0 0 25px;
+  font-size: 32px;
+  cursor: pointer;
+  transition: 0.1s;
+  outline: none !important;
+}
+.back-btn:hover {
+  color: royalblue;
+}
+
+.centre-text {
+  text-align: center;
+}
+
+.location-header {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.location-image {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+}
+
+.location-text-box {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5rem;
+}
+
+.location-text-box p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-top: 0.5rem;
+}
+
+.location-map {
+  width: 70%;
+  height: 50vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  border: 0;
+}
+
+.mini-map {
+  width: 100%;
+  height: 40vh;
+  display: block;
+  padding: 0.5rem;
+  border: 0;
+}
+
+.mini-map-container {
+  width: 70%;
+}
+
+.mini-map-container p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-left: 0.5rem;
+}
+
+.mini-map-container-left {
+  margin-left: 25%;
+  margin-right: 5%;
+}
+
+.mini-map-container-right {
+  margin-left: 5%;
+  margin-right: 25%;
+}
+
+.google-sheet {
+  width: 70%;
+  height: 70vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  border: 0;
+}
+
+.google-doc {
+  width: 70%;
+  height: 70vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  border-width: medium;
+  border-color: black;
+}
+
+.location-quick-links-container {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location-quick-links-container ul {
+  margin-left: 0;
+  padding-left: 1rem;
+}
+
+.location-quick-links-container li {
+  font-family: 'Roboto', serif;
+  font-size: 1.0rem;
+  font-weight: 400;
+}
+
+.location-quick-links-container li:hover {
+  text-decoration: underline;
+}
+
+.location-quick-links-container a {
+  padding-left: 1rem;
+}
+
+/* Photo Gallery */
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.gallery-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.gallery-image img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Media queries for adventures.html */
+@media only screen and (max-width: 767px) {
+  .back-btn {
+    padding-top: 60px;
+    font-size: 25px;
+  }
+
+  .adventures-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .trip-container .text-box h1 {
+    font-size: 2.0rem
+  }
+
+  .trip-container-left, .trip-container-right {
+    /* Center the div. */
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .mini-map-container-left, .mini-map-container-right {
+    /* Center the div. */
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/***************/
+/* guides.html */
+/***************/
+.guides-header {
+  background-image: url(../images/guides-image.jpg);
+  background-position: top;
+  object-fit: cover;
+  height: 50vh;
+}
+
+.guides-background-tint {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-position: bottom center;
+  width: 100%;
+  height: 50vh;
+}
+
+.guides-header-text-box {
+  color: #F5F5F5;
+  position: relative;
+  text-align: center;
+  top: 45%;
+}
+
+.guides-header-text-box h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.guides-note {
+  width: 50%;
+  color: black;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 5% auto;
+}
+
+.guides-container {
+  background-image: url(../images/guides-image.jpg);
+  width: 100%;
+  height: 120vh;
+}
+
+.guides-tint-left {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 120vh;
+}
+
+.guides-tint-right {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 120vh;
+}
+
+.guides-list {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: left;
+  padding: 2rem 3rem;
+  color: #F5F5F5;
+}
+
+.guide-item {
+
+}
